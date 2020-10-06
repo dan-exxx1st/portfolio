@@ -3,6 +3,7 @@ const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const PATHS = {
 	src: path.join(__dirname, '../src'),
@@ -130,6 +131,7 @@ module.exports = {
 			{ from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
 			{ from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
 		]),
+		new ESLintPlugin(),
 
 		...PAGES.map(
 			(page) =>

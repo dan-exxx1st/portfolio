@@ -1,0 +1,49 @@
+.first-screen {
+	height: 100vh;
+	background: url('../assets/img/top-bg.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__text {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+
+	&__caption {
+		font-size: 18px;
+		line-height: 21px;
+		color: $w;
+		margin-bottom: 10px;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 42px;
+		line-height: 49px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: $w;
+	}
+
+	&__dropdown {
+		position: absolute;
+		left: 50%;
+		bottom: 50px;
+		transform: translateX(-50%);
+		cursor: pointer;
+		border-radius: 50%;
+		transition: 0.2s all ease-in-out;
+		&:hover {
+			background: rgba(0, 0, 0, 0.2);
+		}
+	}
+}

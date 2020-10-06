@@ -1,0 +1,43 @@
+@import './var';
+@import './firstScreen';
+@import './content';
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.lang {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	top: 20px;
+	right: 100px;
+	color: $w;
+	cursor: pointer;
+	user-select: none;
+
+	& > img {
+		margin-right: 10px;
+	}
+
+	&.select {
+		& > span {
+			display: none;
+		}
+		& > ul {
+			display: flex;
+		}
+	}
+
+	&__list {
+		list-style: none;
+		display: none;
+		flex-direction: column;
+		&__item.active {
+			background: #000;
+		}
+	}
+}

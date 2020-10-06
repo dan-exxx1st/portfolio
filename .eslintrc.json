@@ -1,0 +1,15 @@
+{
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"rules": {
+		"semi": "error"
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"es2020": true
+	},
+	"plugins": ["promise"]
+}
