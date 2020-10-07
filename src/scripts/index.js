@@ -53,6 +53,7 @@ function _bottomScrollBtnHandler() {
 
 if (window) {
 	window.onload = function () {
+		console.log();
 		LANGUAGE = localStorage.getItem('lang') || 'RU';
 		_rerenderElementsWithDifferentLang();
 		let langEl = document.querySelector('.lang'),
@@ -63,6 +64,20 @@ if (window) {
 			el.addEventListener('click', () => SelectLang(el));
 		});
 		scrollBtn.addEventListener('click', () => _bottomScrollBtnHandler());
+
+		window.onscroll = () => {
+			let header = document.querySelector('.header');
+			let skillsTitle = document.querySelector('.skills__title');
+			if (window.scrollY >= window.innerHeight) {
+				if (header.style.display !== 'fixed') {
+					header.style.position = 'fixed';
+					skillsTitle.style.marginTop = '140px';
+				}
+			} else {
+				header.style.position = 'static';
+				skillsTitle.style.marginTop = '100px';
+			}
+		};
 
 		// let headerEl = document.querySelector('.header')
 	};

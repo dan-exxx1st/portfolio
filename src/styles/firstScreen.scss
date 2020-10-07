@@ -47,3 +47,15 @@
 		}
 	}
 }
+
+@media (max-width: 375px) {
+	.first-screen {
+		&__caption {
+			font-size: 12px;
+		}
+
+		&__title {
+			font-size: 32px;
+		}
+	}
+}
