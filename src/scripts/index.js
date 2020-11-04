@@ -53,12 +53,28 @@ if (window) {
 		LANGUAGE = localStorage.getItem('lang') || 'RU';
 		_rerenderElementsWithDifferentLang();
 
-		let langEl = document.querySelector('.lang'),
+		let preloader = document.querySelector('.preloader'),
+			content = document.querySelector('.content'),
+			langEl = document.querySelector('.lang'),
 			langListEl = document.querySelector('.lang__list');
 
 		langEl.addEventListener('click', () => ChangeLangElClass(langEl));
 		langListEl.childNodes.forEach((el) => {
 			el.addEventListener('click', () => SelectLang(el));
 		});
+
+		let loadTime = 1;
+
+		let timer = setInterval(function () {
+			console.log('time');
+			if (loadTime <= 0) {
+				clearInterval(timer);
+				preloader.style.display = 'none';
+				content.style.display = 'flex';
+			} else {
+				preloader.style.opacity = loadTime;
+				loadTime -= 0.02;
+			}
+		}, 20);
 	};
 }

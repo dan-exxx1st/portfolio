@@ -16,6 +16,10 @@
 	list-style: none;
 }
 
+body {
+	overflow-x: hidden;
+}
+
 .lang {
 	position: absolute;
 	display: flex;
