@@ -6,111 +6,11 @@ html(lang="ru")
         title Portfolio
         link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet")
     body
-        section.first-screen
-            .lang
-                img(src="../assets/img/lang-icon.svg", alt="Language icon")
-                span RU
-                ul.lang__list
-                    li.lang__list__item RU
-                    li.lang__list__item EU
-            .first-screen__text
-                span.first-screen__caption Приветствую. Меня зовут Парфенов Даниил и я
-                h1.first-screen__title начинающий front-end разработчик
-            img(src="../assets/img/drop-down-btn.svg", alt="Drop down btn").first-screen__dropdown
+        include first-screen_section
         section.content
             .container
-                .header
-                    nav.nav
-                        ul.nav__list
-                            li.nav__list__item Главная страница
-                            li.nav__list__item Навыки
-                            li.nav__list__item Образование
-                            li.nav__list__item Портфолио
-                            li.nav__list__item Обо мне
-                            li.nav__list__item Мои контакты
-                .skills
-                    h2.skills__title Навыки
-                    h2.skills__bg-title Навыки
-                    .skills__list
-                        ul.skills__list__left
-                            li.skills__list__item
-                                span.skills__list__item__text HTML5
-                                .skills__list__item__lines
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line.active
-                            li.skills__list__item
-                                span.skills__list__item__text Pug/Jade
-                                .skills__list__item__lines
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line
-                            li.skills__list__item
-                                span.skills__list__item__text CSS3
-                                .skills__list__item__lines
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line
-                                    .skills__line
-                            li.skills__list__item
-                                span.skills__list__item__text Sass/Scss
-                                .skills__list__item__lines
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line
-                                    .skills__line
-                            li.skills__list__item
-                                span.skills__list__item__text JavaScript
-                                .skills__list__item__lines
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line
-                                    .skills__line
-                        ul.skills__list__right
-                            li.skills__list__item
-                                span.skills__list__item__text TypeScript
-                                .skills__list__item__lines
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line
-                                    .skills__line
-                                    .skills__line
-                            li.skills__list__item
-                                span.skills__list__item__text Reactjs
-                                .skills__list__item__lines
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line
-                                    .skills__line
-                            li.skills__list__item
-                                span.skills__list__item__text Webpack 4
-                                .skills__list__item__lines
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line
-                                    .skills__line
-                            li.skills__list__item
-                                span.skills__list__item__text Node.js
-                                .skills__list__item__lines
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line
-                                    .skills__line
-                            li.skills__list__item
-                                span.skills__list__item__text Jest & Enzyme
-                                .skills__list__item__lines
-                                    .skills__line.active
-                                    .skills__line.active
-                                    .skills__line
-                                    .skills__line
-                                    .skills__line
+                img(src="../assets/img/drop-down-btn.svg", alt="Drop down btn").to-top-arrow
+                include header_section
+                include skills_section
+                include education_section
+                include portfolio_section

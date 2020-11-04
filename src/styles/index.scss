@@ -1,6 +1,12 @@
 @import './var';
-@import './firstScreen';
 @import './content';
+
+/* Import sections styles */
+@import './sections/firstScreen';
+@import './sections/header';
+@import './sections/skills';
+@import './sections/education';
+@import './sections/portfolio';
 
 * {
 	margin: 0;

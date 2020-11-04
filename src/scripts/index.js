@@ -1,3 +1,6 @@
+import { navigationHandler } from './navigation';
+import { scrollHelper } from './helpers';
+
 import '../styles/index.scss';
 let LANGUAGE;
 
@@ -43,42 +46,19 @@ function _rerenderElementsWithDifferentLang() {
 	langSpan.childNodes[1].innerText = LANGUAGE;
 }
 
-function _bottomScrollBtnHandler() {
-	let header = document.querySelector('.header');
-	header.scrollIntoView({
-		behavior: 'smooth',
-		block: 'start',
-	});
-}
-
 if (window) {
 	window.onload = function () {
-		console.log();
+		navigationHandler();
+		scrollHelper();
 		LANGUAGE = localStorage.getItem('lang') || 'RU';
 		_rerenderElementsWithDifferentLang();
+
 		let langEl = document.querySelector('.lang'),
-			langListEl = document.querySelector('.lang__list'),
-			scrollBtn = document.querySelector('.first-screen__dropdown');
+			langListEl = document.querySelector('.lang__list');
+
 		langEl.addEventListener('click', () => ChangeLangElClass(langEl));
 		langListEl.childNodes.forEach((el) => {
 			el.addEventListener('click', () => SelectLang(el));
 		});
-		scrollBtn.addEventListener('click', () => _bottomScrollBtnHandler());
-
-		window.onscroll = () => {
-			let header = document.querySelector('.header');
-			let skillsTitle = document.querySelector('.skills__title');
-			if (window.scrollY >= window.innerHeight) {
-				if (header.style.display !== 'fixed') {
-					header.style.position = 'fixed';
-					skillsTitle.style.marginTop = '140px';
-				}
-			} else {
-				header.style.position = 'static';
-				skillsTitle.style.marginTop = '100px';
-			}
-		};
-
-		// let headerEl = document.querySelector('.header')
 	};
 }

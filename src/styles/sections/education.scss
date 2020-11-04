@@ -1,0 +1,62 @@
+.education {
+	position: relative;
+
+	&__title {
+		@include H2Title;
+		margin-bottom: 40px;
+	}
+
+	&__bg-title {
+		margin-top: -10px;
+		@include H2BgTitle;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: center;
+
+		&__date__item,
+		&__text__item {
+			@include Body1Text;
+		}
+
+		&__date {
+			display: flex;
+			flex-direction: column;
+			white-space: nowrap;
+
+			&__item {
+				margin-bottom: 80px;
+			}
+		}
+
+		&__time-line {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0 20px;
+
+			&__dot {
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background: $blc;
+			}
+
+			&__line {
+				width: 2px;
+				height: 100px;
+				background: $blc;
+			}
+		}
+
+		&__text {
+			max-width: 360px;
+
+			&__item {
+				margin-top: -5px;
+				margin-bottom: 65px;
+			}
+		}
+	}
+}

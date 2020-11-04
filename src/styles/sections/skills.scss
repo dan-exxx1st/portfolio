@@ -1,0 +1,56 @@
+.skills {
+	position: relative;
+	&__title {
+		@include H2Title;
+	}
+
+	&__bg-title {
+		@include H2BgTitle;
+	}
+
+	&__line {
+		width: 50px;
+		height: 2px;
+		background: $w;
+		margin-right: 10px;
+		&.active {
+			background: $blc;
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		margin-top: 50px;
+
+		&__left,
+		&__right {
+			width: 430px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&__left {
+			margin-right: 150px;
+		}
+
+		&__item {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			justify-content: space-between;
+			margin-bottom: 20px;
+			&__text {
+				font-size: 18px;
+				line-height: 21px;
+				color: $w;
+			}
+
+			&__lines {
+				display: flex;
+			}
+		}
+	}
+}

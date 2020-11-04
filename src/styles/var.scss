@@ -1,12 +1,31 @@
 // Colors
 $w: #efefef; //Main white color
 $bc: #1e1e1e;
-$lc: #efefef;
 $blc: #00c2ff;
 
 @mixin H2Title {
 	font-size: 28px;
 	line-height: 33px;
 	letter-spacing: 0.07em;
-	color: $lc;
+	color: $w;
+	margin-top: 100px;
+}
+
+@mixin H2BgTitle {
+	position: absolute;
+	top: -15px;
+	right: 0;
+	font-size: 72px;
+	letter-spacing: 0.02em;
+	color: $w;
+	opacity: 0.05;
+	text-transform: uppercase;
+}
+
+@mixin Body1Text {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+	color: $w;
 }

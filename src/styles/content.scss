@@ -10,96 +10,17 @@
 	padding: 0 10px;
 }
 
-.header {
-	display: flex;
-	justify-content: space-between;
-	padding-top: 20px;
-	top: 0;
-}
+.to-top-arrow {
+	display: none;
+	position: fixed;
+	bottom: 100px;
+	right: 100px;
+	transform: rotate(180deg);
+	cursor: pointer;
+	border-radius: 50%;
 
-.nav {
-	&__list {
-		display: flex;
-		&__item {
-			cursor: pointer;
-			margin-right: 25px;
-			font-size: 16px;
-			line-height: 19px;
-			display: flex;
-			align-items: center;
-			text-align: center;
-			letter-spacing: 0.02em;
-			color: #efefef;
-			transition: 0.5s all ease-in-out;
-
-			&:hover {
-				transform: scale(1.05);
-			}
-		}
-	}
-}
-
-.skills {
-	position: relative;
-	&__title {
-		@include H2Title;
-		margin-top: 100px;
-	}
-
-	&__bg-title {
-		position: absolute;
-		top: -15px;
-		right: 0;
-		font-size: 72px;
-		letter-spacing: 0.02em;
-		color: $w;
-		opacity: 0.05;
-	}
-
-	&__line {
-		width: 50px;
-		height: 2px;
-		background: $w;
-		margin-right: 10px;
-		&.active {
-			background: $blc;
-		}
-	}
-
-	&__list {
-		display: flex;
-		align-items: start;
-		justify-content: start;
-		flex-wrap: wrap;
-		margin-top: 50px;
-
-		&__left,
-		&__right {
-			width: 430px;
-			display: flex;
-			flex-wrap: wrap;
-		}
-
-		&__left {
-			margin-right: 150px;
-		}
-
-		&__item {
-			display: flex;
-			align-items: center;
-			width: 100%;
-			justify-content: space-between;
-			margin-bottom: 20px;
-			&__text {
-				font-size: 18px;
-				line-height: 21px;
-				color: $w;
-			}
-
-			&__lines {
-				display: flex;
-			}
-		}
+	&:hover {
+		background: lighten(#323232, 5%);
 	}
 }
 
