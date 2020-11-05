@@ -1,0 +1,5 @@
+.about-me {
+	&__title {
+		@include H2Title;
+	}
+}

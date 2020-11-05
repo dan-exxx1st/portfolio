@@ -7,6 +7,7 @@
 @import './sections/skills';
 @import './sections/education';
 @import './sections/portfolio';
+@import './sections/aboutMe';
 
 * {
 	margin: 0;
@@ -18,15 +19,16 @@
 
 body {
 	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 .lang {
-	position: absolute;
+	position: fixed;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
 	top: 20px;
-	right: 100px;
+	right: 50px;
 	color: $w;
 	cursor: pointer;
 	user-select: none;
@@ -51,17 +53,5 @@ body {
 		&__item.active {
 			background: #000;
 		}
-	}
-}
-
-@media (max-width: 768px) and (min-width: 375px) {
-	.lang {
-		right: 50px;
-	}
-}
-
-@media (max-width: 375px) {
-	.lang {
-		right: 20px;
 	}
 }

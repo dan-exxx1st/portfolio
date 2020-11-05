@@ -1,5 +1,10 @@
 .portfolio {
+	position: relative;
 	&__title {
 		@include H2Title;
+	}
+
+	&__bg-title {
+		@include H2BgTitle;
 	}
 }
