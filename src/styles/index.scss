@@ -37,11 +37,16 @@ body {
 		margin-right: 10px;
 	}
 
+	& > span {
+		margin-top: 5px;
+	}
+
 	&.select {
 		& > span {
 			display: none;
 		}
 		& > ul {
+			margin-top: 5px;
 			display: flex;
 		}
 	}

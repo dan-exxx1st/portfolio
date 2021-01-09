@@ -46,11 +46,6 @@ module.exports = {
 			{
 				test: /\.pug$/,
 				oneOf: [
-					// this applies to <template lang="pug"> in Vue components
-					{
-						resourceQuery: /^\?vue/,
-						use: ['pug-plain-loader'],
-					},
 					// this applies to pug imports inside JavaScript
 					{
 						use: ['pug-loader'],
@@ -129,7 +124,6 @@ module.exports = {
 		}),
 		new CopyWebpackPlugin([
 			{ from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-			{ from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
 		]),
 		new ESLintPlugin(),
 
