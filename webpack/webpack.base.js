@@ -15,6 +15,7 @@ const PAGES_DIR = `${PATHS.src}/views`;
 const PAGES = fs
 	.readdirSync(PAGES_DIR)
 	.filter((fileName) => fileName.endsWith('.pug'));
+const IS_DEV = process.env.NODE_ENV === 'development';
 
 module.exports = {
 	// BASE config
@@ -74,8 +75,7 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				use: [
-					'style-loader',
-					MiniCssExtractPlugin.loader,
+					IS_DEV ? 'style-loader' : MiniCssExtractPlugin.loader,
 					{
 						loader: 'css-loader',
 						options: { sourceMap: true },
@@ -84,7 +84,6 @@ module.exports = {
 						loader: 'postcss-loader',
 						options: {
 							sourceMap: true,
-							config: { path: `./postcss.config.js` },
 						},
 					},
 					{
@@ -122,9 +121,11 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: `${PATHS.assets}css/[name].[hash].css`,
 		}),
-		new CopyWebpackPlugin([
-			{ from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-		]),
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
+			],
+		}),
 		new ESLintPlugin(),
 
 		...PAGES.map(
