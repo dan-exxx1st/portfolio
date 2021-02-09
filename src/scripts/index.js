@@ -1,5 +1,10 @@
 import { navigationHandler } from './navigation';
 import { scrollHelper } from './helpers';
+import {
+	RenderAboutMeContent,
+	RenderEducationText,
+	RenderPortfolioCards,
+} from './views/index';
 
 import '../styles/index.scss';
 let LANGUAGE;
@@ -95,6 +100,9 @@ function _rerenderElementsWithDifferentLang() {
 }
 
 if (window) {
+	RenderAboutMeContent();
+	RenderEducationText();
+	RenderPortfolioCards();
 	navigationHandler();
 	scrollHelper();
 	LANGUAGE = localStorage.getItem('lang') || 'RU';
