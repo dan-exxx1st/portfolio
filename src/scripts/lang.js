@@ -58,7 +58,7 @@ export default function () {
 		contactsInfo[2].textContent = 'Мой профиль на Gitlab ';
 	} else {
 		document.title = 'Daniil Parfenov';
-		html.lang = 'eu';
+		html.lang = 'en';
 
 		firstScreenCaption.textContent = `Hello. My name is Dan Parfenov and I'm`;
 		firstScreenTitle.textContent = 'junior front-end developer';
