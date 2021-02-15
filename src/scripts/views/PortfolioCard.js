@@ -1,4 +1,4 @@
-import { CardsDataRu, CardsDataEu } from '../data';
+import { CardsDataRu, CardsDataEn } from '../data';
 
 const PortfolioCard = (opts) => {
 	const lang = localStorage.getItem('lang') || 'RU';
@@ -17,7 +17,7 @@ const PortfolioCard = (opts) => {
 };
 
 export default function RenderPortfolioCards(lang) {
-	const CardsData = lang === 'RU' ? CardsDataRu : CardsDataEu;
+	const CardsData = lang === 'RU' ? CardsDataRu : CardsDataEn;
 	const Cards = CardsData.map(PortfolioCard);
 	const portfolioSectionCards = document.querySelector('.portfolio__list');
 	portfolioSectionCards.innerHTML = '';

@@ -14,7 +14,7 @@ function RenderEducationText(lang) {
 			break;
 		}
 
-		case 'EU': {
+		case 'EN': {
 			educationDates[0].innerText = 'June 2020';
 			educationDates[1].innerText = 'August 2020';
 			educationText[0].innerText =

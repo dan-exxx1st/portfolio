@@ -1,9 +1,9 @@
-import { AboutMeContentRu, AboutMeContentEu } from '../data';
+import { AboutMeContentRu, AboutMeContentEn } from '../data';
 
 export default function (lang) {
 	const oldContent = document.querySelector('.about-me__content');
 
-	const abouteMeContent = lang === 'RU' ? AboutMeContentRu : AboutMeContentEu;
+	const abouteMeContent = lang === 'RU' ? AboutMeContentRu : AboutMeContentEn;
 	const aboutMeContentSection = document.createElement('div');
 	aboutMeContentSection.innerHTML = abouteMeContent;
 	aboutMeContentSection.className = 'about-me__content';

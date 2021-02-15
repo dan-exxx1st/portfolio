@@ -45,7 +45,7 @@ export const CardsDataRu = [
 	},
 ];
 
-export const CardsDataEu = [
+export const CardsDataEn = [
 	{
 		title: 'Reaql-frontend',
 		description: `Reaql-frontend - this is a front-end application written on the following technology stack: Typescript, React v16, Graphql, Apollo client v3 и Styled components.<br> 
@@ -120,7 +120,7 @@ Adobe Photoshop, Adobe Illustrator, Figma, Zeplin, Avocode. <br>
 Git, Github, Gitlab, Linux, Bash. 
 `;
 
-export const AboutMeContentEu = `
+export const AboutMeContentEn = `
 <p class="about-me__content__title">I'm <span>Junior fullstack developer</span>, with a focus on front-end development.</p>
 <span class="about-me__content__title">My skills:</span> <br>
 <span class="about-me__content__second">Programming languages: </span>C#, Go, JavaScript (es5+). <br>
