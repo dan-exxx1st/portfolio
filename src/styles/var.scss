@@ -4,11 +4,10 @@ $bc: #1e1e1e;
 $blc: #00c2ff;
 
 @mixin H2Title {
-	font-size: 28px;
-	line-height: 33px;
+	font-size: 30px;
 	letter-spacing: 0.07em;
 	color: $w;
-	margin-top: 100px;
+	margin: 100px 0 40px 0;
 }
 
 @mixin H2BgTitle {

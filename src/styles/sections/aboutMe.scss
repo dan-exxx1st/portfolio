@@ -1,5 +1,31 @@
 .about-me {
+	position: relative;
 	&__title {
 		@include H2Title;
+	}
+
+	&__bg-title {
+		@include H2BgTitle;
+	}
+
+	&__content {
+		color: $w;
+		font-size: 16px;
+		font-weight: normal;
+
+		&__title {
+			font-size: 20px;
+			font-weight: bold;
+
+			& > span {
+				color: $blc;
+			}
+		}
+
+		&__second {
+			font-size: 18px;
+			color: $blc;
+			font-weight: bold;
+		}
 	}
 }
