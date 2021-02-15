@@ -30,7 +30,7 @@ export default function () {
 
 		firstScreenCaption.textContent =
 			'Приветствую. Меня зовут Парфенов Даниил и я';
-		firstScreenTitle.textContent = 'начинающий front-end разработчик';
+		firstScreenTitle.textContent = 'начинающий full-stack разработчик';
 
 		navListItems[0].textContent = 'Главная страница';
 		navListItems[1].textContent = 'Навыки';
@@ -61,7 +61,7 @@ export default function () {
 		html.lang = 'en';
 
 		firstScreenCaption.textContent = `Hello. My name is Dan Parfenov and I'm`;
-		firstScreenTitle.textContent = 'junior front-end developer';
+		firstScreenTitle.textContent = 'junior full-stack developer';
 
 		navListItems[0].textContent = 'Main page';
 		navListItems[1].textContent = 'Skills';
