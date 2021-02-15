@@ -16,15 +16,15 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Build
         run: |
-          yarn
-          yarn build
+          npm install
+          npm run build
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           REPOSITORY_NAME: dan-exxx1st/dan-exxx1st.github.io
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
