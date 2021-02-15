@@ -1,5 +1,10 @@
 import { navigationHandler } from './navigation';
 import { scrollHelper } from './helpers';
+import {
+	RenderAboutMeContent,
+	RenderEducationText,
+	RenderPortfolioCards,
+} from './views/index';
 
 import '../styles/index.scss';
 let LANGUAGE;
@@ -95,22 +100,24 @@ function _rerenderElementsWithDifferentLang() {
 }
 
 if (window) {
+	RenderAboutMeContent();
+	RenderEducationText();
+	RenderPortfolioCards();
+	navigationHandler();
+	scrollHelper();
+	LANGUAGE = localStorage.getItem('lang') || 'RU';
+	_rerenderElementsWithDifferentLang();
+
+	let preloader = document.querySelector('.preloader'),
+		content = document.querySelector('.content'),
+		langEl = document.querySelector('.lang'),
+		langListEl = document.querySelector('.lang__list');
+
+	langEl.addEventListener('click', () => ChangeLangElClass(langEl));
+	langListEl.childNodes.forEach((el) => {
+		el.addEventListener('click', () => SelectLang(el));
+	});
 	window.onload = function () {
-		navigationHandler();
-		scrollHelper();
-		LANGUAGE = localStorage.getItem('lang') || 'RU';
-		_rerenderElementsWithDifferentLang();
-
-		let preloader = document.querySelector('.preloader'),
-			content = document.querySelector('.content'),
-			langEl = document.querySelector('.lang'),
-			langListEl = document.querySelector('.lang__list');
-
-		langEl.addEventListener('click', () => ChangeLangElClass(langEl));
-		langListEl.childNodes.forEach((el) => {
-			el.addEventListener('click', () => SelectLang(el));
-		});
-
 		let loadTime = 1;
 
 		let timer = setInterval(function () {

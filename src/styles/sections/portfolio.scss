@@ -7,4 +7,10 @@
 	&__bg-title {
 		@include H2BgTitle;
 	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
 }

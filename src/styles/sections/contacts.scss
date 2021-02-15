@@ -1,0 +1,38 @@
+.contacts {
+	position: relative;
+
+	&__title {
+		@include H2Title;
+	}
+
+	&__bg-title {
+		@include H2BgTitle;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+
+		& > * {
+			@include Body1Text;
+			margin: 5px 0;
+		}
+
+		& > p {
+			& > span {
+				&:first-child {
+					color: $blc;
+					font-weight: bold;
+				}
+			}
+		}
+
+		& > a {
+			color: $blc;
+			font-weight: bold;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
