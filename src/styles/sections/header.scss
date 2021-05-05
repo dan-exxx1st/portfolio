@@ -26,3 +26,13 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.nav {
+		&__list {
+			&__item {
+				margin-right: 10px;
+			}
+		}
+	}
+}
